@@ -7,7 +7,6 @@ API RESTful para gestionar una **Librería/Biblioteca** con:
 - **Préstamos** (usuarios pueden pedir/devolver)
 - **Usuarios** (registro/login con **bcrypt** + **JWT**)
 
-> Mantiene los puntos del TPI: 2+ entidades principales + CRUD, validaciones, seguridad (bcrypt + rate limiting), Postman y documentación.
 
 ---
 
@@ -149,31 +148,3 @@ Flujo recomendado:
 4) Login como user → `token`
 5) Crear Préstamo → devolver
 
----
-
-## Frontend (opcional)
-
-`./public/index.html` muestra un catálogo simple consumiendo `GET /api/libros` y `GET /api/autores`.
-Abrí: `http://localhost:5000`
-
----
-
-## Deploy (opcional - Render)
-
-1) Usar MongoDB Atlas y setear `MONGO_URI`
-2) Crear Web Service en Render
-3) Variables de entorno mínimas:
-   - `MONGO_URI`
-   - `JWT_SECRET`
-   - `BCRYPT_SALT_ROUNDS`
-
----
-
-## Checklist TPI
-
-- [x] 2+ entidades principales (Autores/Libros) + extra (Categorías/Préstamos/Usuarios)
-- [x] CRUD completo (para entidades)
-- [x] Seguridad: bcrypt + validaciones + rate limiting
-- [x] Pruebas en Postman (colección incluida)
-- [x] Documentación (README)
-- [ ] Deploy en Render (opcional)
